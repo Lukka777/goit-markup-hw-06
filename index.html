@@ -60,7 +60,9 @@
           для вашего бизнеса
         </h1>
       </div>
-      <button type="button" class="button-hero">Заказать услугу</button>
+      <button type="button" class="button-hero" data-modal-open>
+        Заказать услугу
+      </button>
     </section>
 
     <section class="section">
@@ -417,25 +419,101 @@
         </div>
         <form class="form-mailind">
           <div class="mailind">
-            <label class="lable-mailing" for="mailing"
+            <label class="lable-distribution" for="distribution"
               >Подпишитесь на рассылку</label
             >
             <input
               type="email"
-              class="input-mailing"
-              name="mailing"
-              id="mailing"
+              class="input-distribution"
+              name="distribution"
+              id="distribution"
               placeholder="E-mail"
             />
           </div>
-          <div class="button-mailing-container">
-            <button class="button-mailing" type="submit">Подписаться</button>
-            <svg class="icon-mailing" width="24px" height="24px">
+          <div class="button-distribution-container">
+            <button class="button-distribution" type="submit">
+              Подписаться
+            </button>
+            <svg class="icon-distribution" width="24px" height="24px">
               <use href="./images/sprite.svg#icon-send"></use>
             </svg>
           </div>
         </form>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form>
+          <b class="modal-title"> Оставьте свои данные, мы вам перезвоним</b>
+          <ul class="list modal-form-field">
+            <li class="form-field">
+              <input
+                type="text"
+                class="form-field-input"
+                name="name"
+                id="name"
+                placeholder=" "
+              />
+              <label for="name" class="form-field-lable">Имя</label>
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#man"></use>
+              </svg>
+            </li>
+            <li class="form-field">
+              <input
+                type="tel"
+                class="form-field-input"
+                name="tel"
+                id="tel"
+                placeholder=" "
+              />
+              <label for="tel" class="form-field-lable">Телефон</label>
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#phone-black"></use>
+              </svg>
+            </li>
+            <li class="form-field">
+              <input
+                type="email"
+                class="form-field-input"
+                name="mail"
+                id="mail"
+                placeholder=" "
+              />
+              <label for="mail" class="form-field-lable">Почта</label>
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#black-envelope"></use>
+              </svg>
+            </li>
+          </ul>
+          <div class="comment-field">
+            <textarea
+              class="comment-textarea"
+              name="comment"
+              placeholder=" "
+              id="comment"
+              rows="8"
+            ></textarea>
+            <label class="comment" for="comment">Коментарий</label>
+          </div>
+          <p class="terms-field">
+            <label class="lable-checkbox" for="terms">
+              <input type="checkbox" class="checkbox" name="terms" id="terms" />
+              <span class="checkbox-text">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="#" class="checkbox-link">Условия договора</a></span
+              >
+            </label>
+          </p>
+          <button type="submit" class="button-submit">Отправить</button>
+        </form>
+        <button class="button-close" data-modal-close>
+          <svg class="button-close-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
