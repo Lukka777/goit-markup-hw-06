@@ -34,6 +34,14 @@ a {
   text-decoration: none;
 }
 
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .conainer {
   width: 1200px;
   margin-left: auto;
@@ -395,14 +403,13 @@ a {
 
 .team-icon-img {
   height: 44px;
+
   width: 44px;
 }
 
 .team-icon-image {
   height: 20px;
   width: 20px;
-  margin-top: 16px;
-  margin-bottom: 24px;
 }
 
 .team-icon-link {
@@ -432,7 +439,7 @@ a {
   padding: 0px;
   border: 2px solid var(--customers-logo);
   width: 170px;
-  height: 120px;
+  height: 90px;
   border-radius: 4px;
   box-sizing: border-box;
   transition: fill 250ms var(--timing-function),
@@ -457,8 +464,8 @@ a {
   margin-right: 30px;
 }
 .customers-logo {
-  width: 75px;
-  height: 108px;
+  width: 70px;
+  height: 56px;
   fill: var(--customers-logo);
   border: 2px;
 }
@@ -483,8 +490,8 @@ a {
 
 .card {
   background-color: var(--primary-background-color);
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  border: 1px solid #eeeeee;
 }
 
 .product-card-link {
@@ -543,6 +550,14 @@ a {
 }
 
 .card > a:focus .product-card > p {
+  transform: translateY(0%);
+}
+
+.product-card-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.product-card-link:hover .section-paragraph {
   transform: translateY(0%);
 }
 
@@ -668,7 +683,7 @@ footer {
 
 .footer-content {
   display: flex;
-  margin-left: 214px;
+  margin-left: auto;
 }
 
 .footer-address {
@@ -751,6 +766,18 @@ footer {
   top: 13px;
   right: 28px;
   fill: var(--accent-color-white);
+}
+.portfolio-line {
+  width: auto;
+  height: 86px;
+  left: 0px;
+  top: 81px;
+  border: 1px solid #ececec;
+}
+
+.product-card-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .backdrop {
   position: fixed;
@@ -943,7 +970,7 @@ footer {
 .checkbox:checked + .checkbox-text::before {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-image: url('../images/icon-check\ .svg');
+  background-image: url('../images/icon-check\.svg');
   background-size: contain;
   background-origin: border-box;
 }
