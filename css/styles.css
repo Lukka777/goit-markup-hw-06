@@ -500,8 +500,8 @@ p {
 }
 
 .section-name {
-  margin-top: 0px;
-  margin-bottom: 4px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   text-align: left;
 }
 
@@ -523,7 +523,7 @@ p {
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 71px;
-  padding-bottom: 55px;
+  padding-bottom: 70px;
   width: 370px;
   height: 295px;
   font-weight: 400;
